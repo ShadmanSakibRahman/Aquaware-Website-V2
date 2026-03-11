@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:github.com)",
+      "Bash(gh api:*)",
+      "Bash(curl -s \"https://api.github.com/repos/ShadmanSakibRahman/Aquaware-Website-V2/git/trees/master?recursive=1\" | python3 -c \"\nimport json, sys\ndata = json.load\\(sys.stdin\\)\nfor item in data['tree']:\n    print\\(item['type'] + '\\\\t' + item['path']\\)\n\" 2>/dev/null || curl -s \"https://api.github.com/repos/ShadmanSakibRahman/Aquaware-Website-V2/git/trees/master?recursive=1\" | python -c \"\nimport json, sys\ndata = json.load\\(sys.stdin\\)\nfor item in data['tree']:\n    print\\(item['type'] + '\\\\t' + item['path']\\)\n\")",
+      "Bash(cd \"D:/Aquaware Website V2\" && cp -r temp_clone/* . && cp temp_clone/.gitignore . && cp -r temp_clone/.orchids . 2>&1)",
+      "Bash(cd \"D:/Aquaware Website V2\" && rm -rf temp_clone && ls -la)",
+      "Bash(cd \"D:/Aquaware Website V2\" && rm -rf .orchids)"
+    ]
+  }
+}
