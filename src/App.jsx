@@ -19,6 +19,7 @@ import {
   site,
   terms,
 } from './content'
+const asset = (p) => (import.meta.env.BASE_URL || "/").replace(/\/$/, "") + p;
 
 function App() {
   return (
@@ -60,7 +61,7 @@ function SiteShell() {
       <WaterBackground />
       <header className='top-nav glass-panel'>
         <Link to='/' className='brand'>
-          <img src={site.brand.logo} alt='Aqua Ware Logo' className='brand-logo' />
+          <img src={asset(site.brand.logo)} alt='Aqua Ware Logo' className='brand-logo' />
         </Link>
         <nav className={`nav-links ${menuOpen ? 'open' : ''}`}>
           {site.nav.map((item) => (
@@ -128,7 +129,7 @@ function HomePage() {
           </a>
         </div>
         <div className='hero-media reveal'>
-          <img src={home.hero.image} alt='Modern Water Treatment Facility' />
+          <img src={asset(home.hero.image)} alt='Modern Water Treatment Facility' />
         </div>
       </section>
 
@@ -142,7 +143,7 @@ function HomePage() {
           </Link>
         </div>
         <div className='pressure-panel reveal glass-panel'>
-          <img src={home.pressure.image} alt='Water management professionals in meeting' />
+          <img src={asset(home.pressure.image)} alt='Water management professionals in meeting' />
           <ul>
             {home.pressure.bullets.map((bullet) => (
               <li key={bullet}>{bullet}</li>
@@ -179,7 +180,7 @@ function HomePage() {
             ))}
           </div>
           <div className='feature-media glass-panel reveal'>
-            <img src={home.functionalities.items[activeService].image} alt={home.functionalities.items[activeService].title} />
+            <img src={asset(home.functionalities.items[activeService].image)} alt={home.functionalities.items[activeService].title} />
           </div>
         </div>
       </section>
@@ -198,7 +199,7 @@ function HomePage() {
           ))}
         </div>
         <blockquote className='quote-panel reveal'>
-          <img src={site.brand.icon} alt='AquaWare logo' />
+          <img src={asset(site.brand.icon)} alt='AquaWare logo' />
           <p>{home.support.quote}</p>
         </blockquote>
       </section>
@@ -317,7 +318,7 @@ function KnowledgePage() {
       <div className='knowledge-grid'>
         {knowledge.list.map((item) => (
           <Link to={`/knowledge/${item.id}`} key={item.id} className='knowledge-card glass-panel reveal'>
-            <img src={item.image} alt={item.title} />
+            <img src={asset(item.image)} alt={item.title} />
             <div>
               <h3>{item.title}</h3>
               <p>{item.quote}</p>
@@ -345,7 +346,7 @@ function KnowledgeArticlePage() {
     <section className='section text-page'>
       <h1>{article.title}</h1>
       <div className='article-hero glass-panel reveal'>
-        <img src={article.image} alt={article.title} />
+        <img src={asset(article.image)} alt={article.title} />
         <button className='ghost-btn'>Share Article</button>
       </div>
       <div className='article-content'>
@@ -445,7 +446,7 @@ function Footer() {
     <footer className='footer'>
       <div className='footer-grid'>
         <div>
-          <img src={site.brand.logo} alt='Aqua Ware' className='footer-logo' />
+          <img src={asset(site.brand.logo)} alt='Aqua Ware' className='footer-logo' />
           <p>{site.brand.tagline}</p>
         </div>
         <div>
