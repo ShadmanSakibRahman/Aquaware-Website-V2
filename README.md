@@ -1,6 +1,7 @@
 # AquaWare Website V2
 
 A modern, responsive website for **AquaWare** — a data-driven platform for monitoring and managing industrial water discharges. Built to help governments gain insight into water quality and take proactive action towards Water Framework Directive (WFD) goals.
+n**Live Demo:** [https://shadmansakibrahman.github.io/Aquaware-Website-V2/](https://shadmansakibrahman.github.io/Aquaware-Website-V2/)
 
 ## Author
 

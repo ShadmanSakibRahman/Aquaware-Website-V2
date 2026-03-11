@@ -22,7 +22,7 @@ import {
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename='/Aquaware-Website-V2'>
       <Routes>
         <Route element={<SiteShell />}>
           <Route path='/' element={<HomePage />} />
